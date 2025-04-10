@@ -15,7 +15,7 @@ import {
 import { useState } from 'react';
 import { useAuth } from '../context/useAuth';
 import { useNavigate } from 'react-router-dom';
-
+import '../css/auction.css';
 const Register = () => {
 
     const [username, setUsername] = useState('')
@@ -37,15 +37,15 @@ const Register = () => {
     return (
         <Tabs variant="enclosed" isFitted w="600px">
             <TabList>
-                <Tab>User Register</Tab>
-                <Tab>Company Register</Tab>
+                <Tab>User</Tab>
+                <Tab>Company</Tab>
             </TabList>
 
             <TabPanels>
                 {/* tab User register */}
                 <TabPanel>
-                    <VStack minH="500px" w="100%" maxW="800px" justifyContent="start" alignItems="start">
-                        <Text mb="20px" color="gray.700" fontSize="44px" fontWeight="bold">User Register</Text>
+                    <VStack className='container' justifyContent="start" alignItems="start">
+                        <Text mb="20px" color="gray.700" fontSize="40px" fontWeight="bold">Registration</Text>
                         <FormControl mb="20px">
                             <FormLabel>Username</FormLabel>
                             <Input bg="white" onChange={(e) => setUsername(e.target.value)} value={username} type="text" placeholder="User name" />
@@ -68,8 +68,8 @@ const Register = () => {
 
                 {/* Tab company register */}
                 <TabPanel>
-                    <VStack minH="500px" w="100%" maxW="800px" justifyContent="start" alignItems="start">
-                        <Text mb="20px" color="gray.700" fontSize="44px" fontWeight="bold">Company Register</Text>
+                    <VStack className='container' justifyContent="start" alignItems="start">
+                        <Text mb="20px" color="gray.700" fontSize="40px" fontWeight="bold">Registration</Text>
                         <FormControl mb="20px">
                             <FormLabel>Company User Name</FormLabel>
                             <Input bg="white" onChange={(e) => setUsername(e.target.value)} value={username} type="text" placeholder="Company user name" />

@@ -1,6 +1,5 @@
 .container {
     display: flex;
-    width: 700px;
     justify-content: start;
     align-items: start;
     padding: 20px;
@@ -8,4 +7,18 @@
     margin-top: 60px;
     border-radius: 8px;
     box-shadow: #000;
+}
+
+/* Medium devices such as tablets (768px and up) */
+@media only screen and (min-width: 768px) {
+    .container {
+        width: 600px;
+    }
+}
+
+/* Large devices such as laptops (1024px and up) */
+@media only screen and (min-width: 1024px) {
+    .container {
+        width: 700px;
+    }
 }

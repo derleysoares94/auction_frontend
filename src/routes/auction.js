@@ -3,6 +3,7 @@ import { Box, VStack, Heading, Text, Divider, Button, Spinner, Badge, Icon, HSta
 import { FaClock, FaDollarSign, FaInfoCircle } from 'react-icons/fa'
 import { useParams } from 'react-router-dom'
 import { get_auction_by_id } from '../api/endpoints'
+import '../css/auction.css';
 
 const AuctionDetails = () => {
     const { id } = useParams()
@@ -35,7 +36,7 @@ const AuctionDetails = () => {
     }
 
     return (
-        <Box className="container" maxW="800px" mx="auto" p={6} boxShadow="lg" borderRadius="md" bg="white">
+        <Box className="container">
             <VStack align="start" spacing={6}>
                 <Heading size="lg" color="teal.500">{auction.title}</Heading>
 
