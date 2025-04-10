@@ -19,7 +19,7 @@ const Home = () => {
     }, [])
 
     return (
-        <VStack className='container' spacing={8} p={8}>
+        <VStack className='home-container' spacing={8} p={8}>
             <Heading as="h1" size="2xl" textAlign="center">
                 Welcome to Auction Project
             </Heading>

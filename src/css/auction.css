@@ -10,9 +10,22 @@
     margin-bottom: 70px;
 }
 
+.home-container {
+    display: flex;
+    justify-content: start;
+    align-items: start;
+    padding: 20px;
+    margin-top: 60px;
+    margin-bottom: 70px;
+}
+
 /* Medium devices such as tablets (768px and up) */
 @media only screen and (min-width: 768px) {
     .container {
+        width: 600px;
+    }
+
+    .home-container {
         width: 600px;
     }
 }
@@ -20,6 +33,10 @@
 /* Large devices such as laptops (1024px and up) */
 @media only screen and (min-width: 1024px) {
     .container {
+        width: 700px;
+    }
+
+    .home-container {
         width: 700px;
     }
 }
