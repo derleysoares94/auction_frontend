@@ -2,7 +2,7 @@ import axios from 'axios'
 import toastr from 'toastr';
 import 'toastr/build/toastr.min.css';
 
-const BASE_URL = 'http://127.0.0.1:8000/api/'
+const BASE_URL = 'https://auction-backend-chr8.onrender.com/api/'
 const LOGIN_URL = `${BASE_URL}users/token/`
 const REFRESH_URL = `${BASE_URL}users/token/refresh/`
 const LOGOUT_URL = `${BASE_URL}users/logout/`
