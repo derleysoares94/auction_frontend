@@ -79,7 +79,7 @@ const Register = () => {
                             <Input bg="white" onChange={(e) => setEmail(e.target.value)} value={email} type="email" placeholder="company@example.com" />
                         </FormControl>
                         <FormControl mb="20px">
-                            <FormLabel>Senha</FormLabel>
+                            <FormLabel>Password</FormLabel>
                             <Input bg="white" onChange={(e) => setPassword(e.target.value)} value={password} type="password" placeholder="Companys password" />
                         </FormControl>
                         <FormControl>

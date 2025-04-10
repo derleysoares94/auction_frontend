@@ -21,7 +21,7 @@ export const login = async (username, password) => {
     try {
         const response = await axios.post(LOGIN_URL,
             { username:username, password:password },   
-            { withCredentials: true }  // Ensures cookies are included
+            { withCredentials: true }
         );
 
         return response.data.success
