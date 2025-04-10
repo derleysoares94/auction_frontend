@@ -63,6 +63,7 @@ const Register = () => {
                             <Input bg="white" onChange={(e) => setPasswordConfirm(e.target.value)} value={passwordConfirm} type="password" placeholder="Confirm your password" />
                         </FormControl>
                         <Button mb="10px" colorScheme="blue" mt="20px" w="100%" onClick={() => handleUserRegister({username, email, password, passwordConfirm, userType: 'user'})}>Register</Button>
+                        <Text onClick={handleNavigate} cursor='pointer' color='gray.600' fontSize='14px'>Have an account? Log In</Text>
                     </VStack>
                 </TabPanel>
 
@@ -88,9 +89,9 @@ const Register = () => {
                         </FormControl>
                         <Input type="hidden" name='userType' value='company' />
                         <Button mb="10px" colorScheme="blue" mt="20px" w="100%" onClick={() => handleUserRegister({ username, email, password, passwordConfirm, userType: 'company' })}>Register</Button>
+                        <Text onClick={handleNavigate} cursor='pointer' color='gray.600' fontSize='14px'>Have an account? Log In</Text>
                     </VStack>
                 </TabPanel>
-                <Text onClick={handleNavigate} cursor='pointer' color='gray.600' fontSize='14px'>Have an account? Log In</Text>
             </TabPanels>
         </Tabs>
     )
