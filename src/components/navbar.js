@@ -17,8 +17,6 @@ import { HamburgerIcon, CloseIcon, ChevronDownIcon } from "@chakra-ui/icons";
 import { useNavigate } from "react-router-dom";
 import "../css/navbar.css";
 import { logout } from "../api/endpoints";
-import toastr from 'toastr'
-import 'toastr/build/toastr.min.css'
 
 const Navbar = ({ userType }) => {
     const navigate = useNavigate();
@@ -28,7 +26,6 @@ const Navbar = ({ userType }) => {
     const handleLogout = async () => {
         const success = await logout();
         if (success) {
-            toastr.success('See you soon.')
             navigate('/login');
         }
     };

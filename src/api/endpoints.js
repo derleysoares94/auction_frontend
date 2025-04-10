@@ -60,6 +60,7 @@ export const logout = async () => {
             {},
             { withCredentials: true }
         )
+        toastr.success('See you soon.')
         return true
     } catch (error) {
         return false
