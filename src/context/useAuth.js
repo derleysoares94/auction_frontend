@@ -66,8 +66,13 @@ export const AuthProvider = ({ children }) => {
             return toastr.error('No data to update')
         }
         try {
-            await update_auction(id, formData)
+            const response = await update_auction(id, formData)
+            if (!response) {
+                toastr.error('Error updating auction')
+                return false
+            }
             toastr.success('Auction updated')
+            return true
         } catch (error) {
             return toastr.error('Error updating auction')
         }

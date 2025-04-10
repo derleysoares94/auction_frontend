@@ -57,8 +57,10 @@ const UpdateAuction = () => {
         formData.append('end_date', endDate);
 
         const response = await auth_update_auction(id, formData)
-
-        navigate('/upcoming_auctions')
+        
+        if (response) {
+            navigate('/upcoming_auctions')
+        }
     }
 
     return (
