@@ -49,6 +49,9 @@ const Navbar = ({ userType }) => {
                             <MenuItem onClick={() => navigate('/upcoming_auctions')}>Upcoming Auctions</MenuItem>
                         </MenuList>
                     </Menu>
+                    <Button onClick={() => navigate('/currencies')} variant="link" color="white">
+                        Currencies
+                    </Button>
                     <Button variant="link" color="white" onClick={handleLogout}>
                         Log out
                     </Button>
@@ -82,6 +85,9 @@ const Navbar = ({ userType }) => {
                                 </Button>
                             </VStack>
                         </Collapse>
+                        <Button variant="link" color="white" onClick={() => navigate('/currencies')}>
+                            Currencies
+                        </Button>
                         <Button variant="link" color="white" onClick={handleLogout}>
                             Log out
                         </Button>

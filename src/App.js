@@ -13,6 +13,7 @@ import Layout from './components/layout';
 import Cookies from "js-cookie";
 import UpdateAuction from './routes/update_auction';
 import Auction from './routes/auction';
+import Currencies from './routes/currencies';
 
 function App() {
   return (
@@ -29,6 +30,7 @@ function App() {
               <Route path='/upcoming_auctions' element={<PrivateRoute><Layout><UpcomingAuctions /></Layout></PrivateRoute>} />
               <Route path='/update_auction/:id' element={<PrivateRoute><Layout><UpdateAuction /></Layout></PrivateRoute>} />
               <Route path='/auction/:id' element={<PrivateRoute><Layout><Auction /></Layout></PrivateRoute>} />
+              <Route path='/currencies' element={<PrivateRoute><Layout><Currencies /></Layout></PrivateRoute>} />
             </Routes>
           </AuthProvider >
         </Router>
