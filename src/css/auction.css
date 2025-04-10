@@ -1,0 +1,11 @@
+.container {
+    display: flex;
+    width: 700px;
+    justify-content: start;
+    align-items: start;
+    padding: 20px;
+    border: 1px solid #ccc;
+    margin-top: 60px;
+    border-radius: 8px;
+    box-shadow: #000;
+}
