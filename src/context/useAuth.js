@@ -39,9 +39,10 @@ export const AuthProvider = ({ children }) => {
             if (success) {
                 get_authenticated_user()
                 nav('/')
+            } else {
+                toastr.error('Invalid username or password')
             }
         } catch {
-            toastr.error('Username or password is incorrect')
             setIsAuthenticated(false)
         }
     }
