@@ -1,70 +1,77 @@
-# Getting Started with Create React App
+# 🎯 Auction Frontend - React + Chakra UI
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+This is a frontend application built with **React** and styled using **Chakra UI**. It consumes a Django-based REST API for an auction platform. The application supports both user and company accounts, allowing them to interact with auctions, place bids, and for companies, create new auctions.
 
-## Available Scripts
+It also includes a **currency conversion feature** powered by the [Frankfurter API](https://www.frankfurter.app/), allowing users to view auction prices in different currencies.
 
-In the project directory, you can run:
+---
 
-### `npm start`
+## ⚙️ Features
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+### 🧑 User
+- Register & login
+- View all auctions
+- Place bids
+- Convert auction prices to another currency
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+### 🏢 Company
+- Register & login
+- View all auctions
+- Place bids
+- Create new auctions
+- Convert auction prices to another currency
 
-### `npm test`
+### 💱 Currency Conversion
+- Real-time conversion using [Frankfurter API](https://www.frankfurter.app/)
+- Supported currencies: USD, EUR, BRL, GBP, etc.
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+---
 
-### `npm run build`
+## 🛠️ Tech Stack
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+- React
+- Chakra UI
+- Axios
+- React Router
+- Context API (for Auth and Global State)
+- Frankfurter API (for exchange rates)
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+---
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+## 🧑‍💻 Getting Started
 
-### `npm run eject`
+1. **Clone the repository**
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+```bash
+git clone https://github.com/derleysoares94/auction_frontend.git
+cd auction_frontend
+```
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+2. **Install dependencies**
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+```bash
+npm install
+```
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+3. **Start the development server**
 
-## Learn More
+```bash
+npm start
+```
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+---
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+## 🔐 Authentication Flow
 
-### Code Splitting
+- JWT or token-based auth using the Django backend.
+- Auth tokens are stored in cookies.
+- Protected routes are available based on the role (User or Company).
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+---
 
-### Analyzing the Bundle Size
+## 🔄 Currency Conversion
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+The conversion utility fetches exchange rates from Frankfurter.
 
-### Making a Progressive Web App
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+Chakra components (like Select) are used to let users choose their desired currency.
