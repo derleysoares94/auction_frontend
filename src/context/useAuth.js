@@ -31,6 +31,9 @@ export const AuthProvider = ({ children }) => {
     }
 
     const login_user = async (username, password) => {
+        if (!username || !password) {
+            return toastr.error('Username and password are required')
+        }
         try {
             const success = await login(username, password);
             if (success) {
@@ -38,6 +41,7 @@ export const AuthProvider = ({ children }) => {
                 nav('/')
             }
         } catch {
+            toastr.error('Username or password is incorrect')
             setIsAuthenticated(false)
         }
     }
