@@ -68,7 +68,7 @@ export const AuthProvider = ({ children }) => {
         try {
             const response = await update_auction(id, formData)
             if (!response) {
-                toastr.error('Error updating auction')
+                toastr.error('Image field is required')
                 return false
             }
             toastr.success('Auction updated')
