@@ -185,3 +185,35 @@ export const get_companies = async () => {
         return call_refresh(error, () => axios.get(COMPANIES_URL, { withCredentials: true }))
     }
 }
+
+export const get_currencies = async () => {
+    try {
+        const response = await axios.get(CURRENCIES_URL)
+        return response.data
+    } catch (error) {
+        console.error("Error fetching currencies:", error);
+        return [];
+    }
+}
+
+export const convert_currencies = async (from, to, amount) => {
+    if (!from || !to || !amount) {
+        toastr.error('The amount value is mandatory.')
+        return
+    }
+
+
+    if (from === to) {
+        toastr.error('The currencies must be different')
+        return
+    }
+
+    try {
+        const response = await axios.get(`https://api.frankfurter.dev/v1/latest?base=${from}&symbols=${to}`)
+        const result = parseFloat((amount * response.data.rates[to]).toFixed(2));
+        return result
+    } catch (error) {
+        console.error("Error fetching currencies:", error);
+        return [];
+    }
+}
