@@ -65,7 +65,7 @@ const Currencies = () => {
                         <Text fontSize="lg" fontWeight="bold">Converted Amount:</Text>
                         <Badge colorScheme="green" fontSize="xl">
                             {
-                                toRef.current && toRef.current.selectedOptions.length > 0
+                                toRef.current && toRef.current.selectedOptions.length > 0 && convertedValue
                                     ? convertedValue.toLocaleString('en-IE', {
                                         style: 'currency',
                                         currency: toRef.current.selectedOptions[0].text
