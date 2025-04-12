@@ -17,6 +17,8 @@ const DELETE_AUCTION_URL = `${BASE_URL}auction/delete-auction/`
 
 const COMPANIES_URL = `${BASE_URL}users/companies/`
 
+const CURRENCIES_URL = 'https://api.frankfurter.dev/v1/currencies'
+
 export const login = async (username, password) => {
     try {
         const response = await axios.post(LOGIN_URL,
